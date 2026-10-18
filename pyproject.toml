@@ -1,0 +1,22 @@
+[project]
+name = "python-1"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "requests>=2.34.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.9,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "python1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
